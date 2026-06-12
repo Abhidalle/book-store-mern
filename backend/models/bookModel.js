@@ -1,21 +1,23 @@
-import moongoose from "mongoose";
+import mongoose from "mongoose";
 
-const bookScheme = moongoose.Schema({
-    title:{
+const bookSchema = mongoose.Schema({
+    title: {
         type: String,
         required: true,
     },
-    author:{
+    author: {
         type: String,
         required: true,
     },
-    publishYear:{
+    publishYear: {
         type: Number,
         required: true,
-    },
-    }
-    {
-        timestamps: true,
-    },
-)
-const Book = moongoose.model('Cat',bookScheme);
+    }, 
+},
+{
+    timestamps: true,
+});
+
+export const Book = mongoose.model('Book', bookSchema);
+
+
