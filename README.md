@@ -1,4 +1,3 @@
 # BOOK STORE MERN APPLICATION
 
-This is my first MERN stack application that i have ever built
-
+This Book Store would allow you to act as your one place stop for  managing your library or even your books

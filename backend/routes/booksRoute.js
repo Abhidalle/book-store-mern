@@ -1,22 +1,3 @@
-import express, { response } from "express";
-import { PORT, MONGO_URL } from "./config.js"
-import mongoose from "mongoose";
-import { Book } from "./models/bookModel.js"; 
-import express from 'express';
-const router = express.Router();
-const app = express();
-
-
-// Middleware for parsing request body
-app.use(express.json());
-app.get('/', (request, response) => {
-    console.log(request);
-    return response.status(234).send("Hello World")
-}); 
-
-
-
-
 
 // Route for Saving a new book
 app.post('/books', async (request, response) => {
@@ -117,20 +98,3 @@ app.delete("/books/:id", async (request, response) => {
 
     }
 });
-
- 
-
-mongoose
-    .connect(MONGO_URL) 
-    .then(() =>{
-        console.log("Connected to MongoDB successfully");
-        app.listen(PORT,()=> {
-    console.log(`App is listening to Port: ${PORT}`);
-    });   
-
-    })
-    .catch((error) =>{
-        console.log("Error while connecting to MongoDB", error);
-
-
-    }); 
