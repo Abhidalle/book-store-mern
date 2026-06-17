@@ -1,6 +1,10 @@
+import express from 'express';
+import { Book } from '../models/bookModel.js';
 
+
+const router = express.Router();
 // Route for Saving a new book
-app.post('/books', async (request, response) => {
+router.post('/', async (request, response) => {
     try {
         if (!request.body.title || !request.body.author || !request.body.publishYear) {
             return response.status(400).send({ message: 'Send all required fields' });
@@ -22,7 +26,7 @@ app.post('/books', async (request, response) => {
 });
 
 //Route to get all Books from the database
-app.get('/books', async(request, response) => {
+router.get('/', async(request, response) => {
     try{
         const books = await Book.find({});
  
@@ -37,7 +41,7 @@ app.get('/books', async(request, response) => {
 });
 
  //Route to get a single book form the database
-app.get('/books/:id', async(request, response) => {
+router.get('/:id', async(request, response) => {
     try{
         const { id } = request.params;
         const book = await Book.findById(id);
@@ -49,9 +53,8 @@ app.get('/books/:id', async(request, response) => {
         response.status(500).send({message: error.message});
     }
 });
-
 //Route for Updating a Book
-app.put("/books/:id", async (request, response)=>{
+router.put("/:id", async (request, response)=>{
     try{
         if(
             !request.body.title ||
@@ -82,7 +85,7 @@ app.put("/books/:id", async (request, response)=>{
 });
 
 //Now finally lets finish our CRUD with the D for Delete Code
-app.delete("/books/:id", async (request, response) => {
+router.delete("/:id", async (request, response) => {
     try{
         const { id } = request.params;
         const result = await Book.findByIdAndDelete(id);
@@ -92,9 +95,11 @@ app.delete("/books/:id", async (request, response) => {
         return response.status(200).send({message: "Book deleated sucessfully"})
 
     } catch(error){
-        cosole.log(error.message); 
+        console.log(error.message); 
         response.status(500).send({ message: error.message });
 
 
     }
 });
+
+export default router;
