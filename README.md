@@ -11,4 +11,14 @@ This Book Store would allow you to act as your one place stop for managing your 
 ## Database: MongoDB Atlas ( Cloud Database and free to use by all)
 
 # The Features
+The backen is easily fully equipped for CRUD operations:
+
+1. Create new book entries.
+
+2. Read/Display a list of all books or details of a single book from one place
+
+3. Update existing book information.
+
+4. Delete books from the database.
+
 
