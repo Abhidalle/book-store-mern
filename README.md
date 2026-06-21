@@ -20,5 +20,3 @@ The backen is easily fully equipped for CRUD operations:
 3. Update existing book information.
 
 4. Delete books from the database.
-
-

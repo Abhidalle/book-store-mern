@@ -11,14 +11,13 @@ const App = () => {
   return (
     //Lets switch from single route to 5 routes and add them here.
     <Routes>
-
       <Route path="/" element={<Home />} />
       <Route path="/books/create" element={<CreateBook />} ></Route>
       <Route path="/books/details/:id" element={<ShowBook />} ></Route>
       <Route path="/books/edit/:id" element={<EditBook />} ></Route>
       <Route path="/books/delete/:id" element={<DeleteBook />} ></Route>
-      
     </Routes>
   );
 }; 
-export default App;
+export default App; 
+ 
