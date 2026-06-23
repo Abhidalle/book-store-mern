@@ -20,3 +20,13 @@ The backen is easily fully equipped for CRUD operations:
 3. Update existing book information.
 
 4. Delete books from the database.
+
+# Prerequisites
+If you will pull this code and try to run this in your computer you need to have tehse pre installed for the basic functioning of this project:
+
+1. Node.js
+2. A MongoDB account and their own database URL
+
+#Installations
+
+  
