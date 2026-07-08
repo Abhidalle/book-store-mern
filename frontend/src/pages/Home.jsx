@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
+
+
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
@@ -16,8 +18,8 @@ const Home = () => {
         axios
             .get('http://localhost:5555/books')
             .then((response) => {
-                setBooks(response.data);
-                setLoading(false);
+                setBooks(response.data.data)
+                setLoading(false); 
             }) 
             .catch((error) => {
                 console.log(error);
@@ -66,17 +68,15 @@ const Home = () => {
                                     <td className="border border-slate-700 rounded-md text-center">
                                         <div className="flex justify-center gap-x-4">
                                             
-                                            {/* View Details Icon */}
                                             <Link to={`/books/details/${book._id}`}>
                                                 <BsInfoCircle className="text-2xl text-green-800" />
                                             </Link>
                                             
-                                            {/* Edit Icon */}
+
                                             <Link to={`/books/edit/${book._id}`}>
                                                 <AiOutlineEdit className="text-2xl text-yellow-600" />
                                             </Link>
 
-                                            {/* Delete Icon */}
                                             <Link to={`/books/delete/${book._id}`}>
                                                 <MdOutlineDelete className="text-2xl text-red-600" />
                                             </Link>
