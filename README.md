@@ -11,7 +11,7 @@ This Book Store would allow you to act as your one place stop for managing your 
 ## Database: MongoDB Atlas ( Cloud Database and free to use by all)
 
 # The Features
-The backen is easily fully equipped for CRUD operations:
+The backend is easily fully equipped for CRUD operations being:
 
 1. Create new book entries.
 
@@ -28,5 +28,3 @@ If you will pull this code and try to run this in your computer you need to have
 2. A MongoDB account and their own database URL
 
 #Installations
-
-  

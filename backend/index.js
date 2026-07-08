@@ -9,6 +9,7 @@ const app = express();
 
 // Middleware for parsing request body
 app.use(express.json());
+app.use(cors());
 
 //Middleware for handling  CORS Policy
 //app.use(
@@ -24,7 +25,7 @@ app.get('/', (request, response) => {
     return response.status(234).send("Hello World")
 }); 
 
-
+ 
 app.use("/books", booksRoute);
  
 mongoose

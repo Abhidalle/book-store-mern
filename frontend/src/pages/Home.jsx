@@ -14,15 +14,17 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true); 
+        setLoading(true);
         axios
             .get('http://localhost:5555/books')
             .then((response) => {
-                setBooks(response.data.data)
-                setLoading(false); 
-            }) 
+                const data = response.data?.data ?? response.data;
+                setBooks(Array.isArray(data) ? data : []);
+                setLoading(false);
+            })
             .catch((error) => {
                 console.log(error);
+                setBooks([]);
                 setLoading(false);
             });
     }, []);
@@ -89,8 +91,8 @@ const Home = () => {
                     </table> 
                 </div>
             )}
-        </div>
-    );
+        </div> 
+    ); 
 };
 
-export default Home;
+export default Home; 
