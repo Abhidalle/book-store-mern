@@ -35,7 +35,7 @@ mongoose
         app.listen(PORT,()=> {
     console.log(`App is listening to Port: ${PORT}`);
     });   
-
+    
     })
     .catch((error) =>{
         console.log("Error while connecting to MongoDB", error);
