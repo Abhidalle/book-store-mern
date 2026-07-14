@@ -36,7 +36,7 @@ const EditBooks  = () => {
     setLoading(true);
     
     axios
-      .put(`${import.meta.env.VITE_API_URL}/books`)
+      put(`${import.meta.env.VITE_API_URL}/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/');

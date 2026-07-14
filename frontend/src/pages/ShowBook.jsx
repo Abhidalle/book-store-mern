@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         setLoading(true); 
-        axios.get(`${import.meta.env.VITE_API_URL}/books`)
+        axios.get(`${import.meta.env.VITE_API_URL}/books/${id}`)
         .then((response) => {
             setBook(response.data);
             setLoading(false);
@@ -19,7 +19,7 @@ const ShowBook = () => {
         .catch((error) => {
             console.log(error);
             setLoading(false);
-        });
+        }); 
     }, []);
     return (
         <div className='p-4'>
