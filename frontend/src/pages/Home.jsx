@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get('http://localhost:5555/books')
+            .get(`${import.meta.env.VITE_API_URL}/books`)
             .then((response) => {
                 const data = response.data?.data ?? response.data;
                 setBooks(Array.isArray(data) ? data : []);

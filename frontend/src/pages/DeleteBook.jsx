@@ -12,7 +12,7 @@ const DeleteBooks = () => {
     const handleDeleteBook = () => {
         setLoading(true);
         axios
-        .delete(`http://localhost:5555/books/${id}`)
+        .delete(`${import.meta.env.VITE_API_URL}/books`)
         .then(() => {
             setLoading(false);
             navigate('/');

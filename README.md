@@ -2,7 +2,7 @@
 
 This Book Store would allow you to act as your one place stop for managing your library or even your personal books. There can be multiple Creative ways to use this for example you can keep in adding all of the books that you read and then save those as a life counter. Also you can also use this for keeping the track of all the books in an library. This is built using a popular Full Stack Framework knows as the MERN Stack.
 
-# The Tech Stack
+# The Tech Stack used
 
 ## Frontend: React( Using Vite ), Tailwind CSS for styling and React ROuter DOM for page navigation
 
@@ -27,5 +27,8 @@ If you will pull this code and try to run this in your computer you need to have
 1. Node.js
 2. A MongoDB account and their own database URL
 
+# Fyture Ideas
+I dont want to abandon this project at this stage this is mearly a stage 1 but it is functional as of now so i am more than happy but what i will turn this later is for sure an place where people can login save books as admins  and then an multiplayer like mode where people can talk about their fav books and all as well!
+
 # AI Declaration
-As this was my first ever Full Stack project i ran into a lot of issues ranging from not being able to set up an Mongo DB atlas id to not being able to make other react components work without erros. So honestly speaking I did use AI during the making of this project for  debugging and unstuck myself from all the mess i could have ran into. But i can still confidenly defend my code and be able to code more efficiently in future projects as well as it was my first one.
+As this was my first ever Full Stack project i ran into a lot of issues ranging from not being able to set up an Mongo DB atlas id to not being able to make other react components work without erros. So honestly speaking I did use AI during the making of this project for  debugging and unstuck myself from all the mess i could have ran into. But i can still confidenly defend my code and be able to code more efficiently in future projects as well as it was my first one.  

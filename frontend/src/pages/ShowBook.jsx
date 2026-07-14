@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         setLoading(true); 
-        axios.get(`http://localhost:5555/books/${id}`)
+        axios.get(`${import.meta.env.VITE_API_URL}/books`)
         .then((response) => {
             setBook(response.data);
             setLoading(false);
@@ -21,7 +21,6 @@ const ShowBook = () => {
             setLoading(false);
         });
     }, []);
-
     return (
         <div className='p-4'>
             <BackButton />

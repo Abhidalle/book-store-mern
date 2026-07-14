@@ -21,7 +21,7 @@ const CreateBook = () => {
     setLoading(true);
     
     axios
-      .post('http://localhost:5555/books', data)
+      .post(`${import.meta.env.VITE_API_URL}/books`)
       .then(() => {
         setLoading(false);
         navigate('/');
