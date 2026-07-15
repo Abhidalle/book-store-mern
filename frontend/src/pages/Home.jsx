@@ -60,10 +60,10 @@ const Home = () => {
             <div className="mt-16 mb-8 bg-sky-50 border border-sky-200 p-6 rounded-xl text-center shadow-sm max-w-3xl mx-auto">
                 <h2 className="text-xl font-bold text-sky-800 mb-2">Built for Hack Club Horizons(Arcana)</h2>
                 <p className="text-gray-700 mb-4">
-                    <strong>For the non-coders:</strong> This is a custom-built, full-stack digital Book Store Vault. It was engineered from scratch using the MERN stack. A React frontend communicates with a live Node/Express server, which reads and writes directly to an online MongoDB cloud database in real-time.
+                    <strong>For the non-coders:</strong> This is a full-stack digital Book Store. It was made by using the MERN stack. A React frontend communicates with a live Node/Express server, which reads and writes directly to an online MongoDB cloud database in real-time.
                 </p>
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">
-                    Designed by Abhinav
+                    Made with love by Abhinav
                 </p>
             </div>
         </div>
